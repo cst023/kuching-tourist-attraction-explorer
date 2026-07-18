@@ -1,5 +1,5 @@
 // ---- Configuration ----
-const API_BASE = process.env.BACKEND_API_URL; 
+const API_BASE = "https://kuching-tourist-attraction-explorer.onrender.com"; 
 
 const CATEGORY_COLORS = {
   Nature: "#03a734",
