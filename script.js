@@ -1,5 +1,5 @@
 // ---- Configuration ----
-const API_BASE = "http://127.0.0.1:8000"; // replace with your live Render API URL after deployment
+const API_BASE = process.env.BACKEND_API_URL; 
 
 const CATEGORY_COLORS = {
   Nature: "#03a734",
