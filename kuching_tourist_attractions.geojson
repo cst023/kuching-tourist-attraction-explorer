@@ -1,0 +1,325 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kuching Waterfront",
+        "category": "Landmark",
+        "description": "Scenic riverside promenade along the Sarawak River with restaurants, performances and views of the Astana and Fort Margherita. Open 24 hours.",
+        "photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Kuching_Waterfront_-_Flickr_-_Dustin_Iskandar.jpg/960px-Kuching_Waterfront_-_Flickr_-_Dustin_Iskandar.jpg?_=20200727022205"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.34573612857666,
+          1.5606171793372567
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Darul Hana Bridge",
+        "category": "Landmark",
+        "description": "Iconic pedestrian bridge linking the Waterfront and north bank. Best visited in the evening. Open 24 hours.",
+        "photo_url": "https://merdekapalace.com/wp-content/uploads/2024/05/Darul-Hana-Bridge_2-1024x683.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.34592635483673,
+          1.5613828487822605
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fort Margherita",
+        "category": "Museum",
+        "description": "Historic fort housing the Brooke Gallery. Usually open during museum hours.",
+        "photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Fort_Margherita_-_Kuching.jpg/960px-Fort_Margherita_-_Kuching.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.3494225366781,
+          1.5608455695391152
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Borneo Cultures Museum",
+        "category": "Museum",
+        "description": "Sarawak's largest museum showcasing Borneo heritage and cultures. Typically open daily except major holidays.",
+        "photo_url": "https://apicms.thestar.com.my/uploads/images/2024/05/14/2693559.webp"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.34236104250502,
+          1.5556487660860054
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Museum Sarawak",
+        "category": "Museum",
+        "description": "Historic museum featuring archaeology, ethnography and natural history collections.",
+        "photo_url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/The_Sarawak_State_Museum%2C_Kuching%2C_Malaysia.JPG"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.34346000963741,
+          1.554895168742659
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chinese History Museum",
+        "category": "Museum",
+        "description": "Museum highlighting the history of the Chinese community in Sarawak.",
+        "photo_url": "https://museum.sarawak.gov.my/web/attachment/show/?docid=MVNtQ09nUWlnbS9CZHdsbnJYTlRTQT09OjpyBYsfHXIZYPLie3NPOag1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.3487371,
+          1.5576859
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "DBKU Cat Museum",
+        "category": "Museum",
+        "description": "Unique museum dedicated to all things feline with exhibits and memorabilia.",
+        "photo_url": "https://merdekapalace.com/wp-content/uploads/2024/05/Cat_Museum_001_Kuching_Malaysia-1-1024x683.jpeg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.33403812319571,
+          1.5865892670467894
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Old Courthouse Kuching",
+        "category": "Culture",
+        "description": "Restored colonial complex with galleries, cafes and cultural events.",
+        "photo_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Old_Court_House_Complex%2C_Kuching_03.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.34475687901394,
+          1.5598393453750377
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tua Pek Kong Temple",
+        "category": "Culture",
+        "description": "One of the oldest Chinese temples in Kuching overlooking the river.",
+        "photo_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Tua_Pek_Kong%2C_Kuching.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.34903971673164,
+          1.5571880493887016
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Carpenter Street",
+        "category": "Culture",
+        "description": "Historic street known for heritage shophouses, caf\u00e9s and local crafts.",
+        "photo_url": "https://www.sarawaktribune.com/wp-content/uploads/2021/03/KCH-pcarpenterstreet1a-1903-man.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.3459454943595,
+          1.5584690709251297
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "India Street",
+        "category": "Culture",
+        "description": "Pedestrian shopping street with traditional businesses and local snacks.",
+        "photo_url": "https://kuchingborneo.info/wp-content/uploads/2011/04/India-Street-Kuching-1.jpg.webp"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.3435413385412,
+          1.5598706448168773
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jalan Main Bazaar",
+        "category": "Culture",
+        "description": "Popular heritage street for handicrafts, antiques and souvenirs.",
+        "photo_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2J1gDt-2llTMhGP0OtIsoSmqOoFXSHhcxX_eITOj49-OtttZy_2zPMpD_lBoZgDgd7HtK3VbO7_s25aG8hDGJR_p7dtCCEPys9oTAL1gDCHS0nRkEDhYcqwTJV6d6j4fHQYMOXi29M2A/s400/DSC_0005.JPG"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.34705675017767,
+          1.5589234216863064
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Semenggoh Wildlife Centre",
+        "category": "Nature",
+        "description": "Nature reserve famous for semi-wild orangutans. Feeding sessions at scheduled times.",
+        "photo_url": "https://images.trvl-media.com/place/6276476/2fe0aa80-cbfe-4170-acd2-0583f913da05.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.31445122319597,
+          1.402220462315036
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kubah National Park",
+        "category": "Nature",
+        "description": "Rainforest park with waterfalls, hiking trails and rich biodiversity.",
+        "photo_url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Kubah_waterafall_at_morning.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.19689426552303,
+          1.6129727655044221
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Orchid Park",
+        "category": "Nature",
+        "description": "Garden featuring numerous orchid species across landscaped grounds.",
+        "photo_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgOZBji0T0GG4iP3tbjuY-wypyKMNmLuswkvpQ6vzh-fZAzQa6mH8R51PeORWQBug8hBt75uMo0vngHeOqoGFQzKsX4TysdK2WViINhKYBDlwO3WpSohyphenhyphenLWEUmUEBtgPAaSr3JjyJ_3tJo/s1600/Aranda+Lion+Gold+ls.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.34707926870179,
+          1.5657859325319576
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Astana",
+        "category": "Landmark",
+        "description": "The Astana (Malay: Astana Sarawak) is a palace in Kuching, Sarawak, Malaysia, on the north bank of the Sarawak River, opposite the Kuching Waterfront. It is the official residence of the Yang di-Pertua Negeri Sarawak (Governor of Sarawak).",
+        "photo_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx65rlNIPfS5cGYXSeXROM7L5JSQg60HVSbdLIzvzXqA&s=10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.3455661943594,
+          1.5638745449179121
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sarawak State Legislative Assembly",
+        "category": "Landmark",
+        "description": "Distinctive state assembly building and modern Kuching landmark.",
+        "photo_url": "https://www.utusanborneo.com.my/sites/default/files/images/article/20231017/dunsarawakrais.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.34786335017762,
+          1.5622972178357863
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Top Spot Food Court",
+        "category": "Food",
+        "description": "Popular seafood food court with many local stalls, busiest in the evening.",
+        "photo_url": "https://lh3.googleusercontent.com/grass-cs/ACvplmMsqT5sJpp33STMUSV6puo0cOP-eWHx6w_6DzXOdbZPcok_StKJ-sDDiKkj8rIHpiHg6JRZDbLxBoHSZgN_f8xpxtmSpIM8V2juixU2HSOoKwffidPjsVc6VaqlE4UVLsJFPoRa4am_LwI=w289-h312-n-k-no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.35243689435949,
+          1.5567563706006253
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Satok Weekend Market",
+        "category": "Food",
+        "description": "Large weekend market offering fresh produce and Sarawak local food.",
+        "photo_url": "https://i0.wp.com/photos.smugmug.com/2017-Blog/i-4K3C2ht/0/L/P1010015-1-L.jpg?w=1100&ssl=1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.32243919304291,
+          1.5582249723703014
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Siniawan Old Town",
+        "category": "Food",
+        "description": "Heritage town known for its evening food market and preserved shophouses.",
+        "photo_url": "https://www.sarawaktourism.com/admin/file_manager/download/?id=348"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.21995297901415,
+          1.446415932326893
+        ]
+      }
+    }
+  ]
+}
