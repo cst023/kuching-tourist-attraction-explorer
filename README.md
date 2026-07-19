@@ -4,7 +4,7 @@ An interactive web map for exploring tourist attractions in Kuching, Sarawak. Us
 
 ## Features
 - Interactive map (Leaflet + OpenStreetMap) with attractions plotted as color-coded markers by category
-- Click a marker to view details: photo, name, category, description
+- Click a marker to view details: photo, name, category, description, and nearby attractions within 2km
 - Search attractions by name or description
 - Filter attractions by category
 
@@ -68,5 +68,5 @@ Update `API_BASE` in `script.js` to point to your local backend if testing local
 ![Map view](<image/map view.png>)
  
 #### Map view with location detail
-![Map view with location detail](<image/map view with detailed info.png>)
+![Map view with location detail](<image/map view with location detail.png>)
 
