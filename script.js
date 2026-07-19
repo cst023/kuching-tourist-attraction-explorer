@@ -11,26 +11,26 @@ const CATEGORY_COLORS = {
 
 // ---- Map setup ----
 const map = L.map("map").setView([1.5533, 110.3592], 13); // Kuching city center
-
+ 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   maxZoom: 19,
 }).addTo(map);
-
+ 
 let markersLayer = L.layerGroup().addTo(map);
-
+ 
 // ---- Marker rendering ----
 function categoryColor(category) {
   return CATEGORY_COLORS[category] || CATEGORY_COLORS.Other;
 }
-
+ 
 function renderMarkers(geojson) {
   markersLayer.clearLayers();
-
+ 
   geojson.features.forEach((feature) => {
     const [lng, lat] = feature.geometry.coordinates;
-    const props = feature.properties;
-
+    const props = { ...feature.properties, lat, lng };
+ 
     const marker = L.circleMarker([lat, lng], {
       radius: 8,
       fillColor: categoryColor(props.category),
@@ -38,21 +38,25 @@ function renderMarkers(geojson) {
       color: "#fff",
       weight: 2,
     });
-
+ 
     marker.bindTooltip(props.name, { direction: "top", offset: [0, -6] });
     marker.on("click", () => showDetailPanel(props));
-
+ 
     marker.addTo(markersLayer);
   });
 }
-
+ 
 // ---- Detail panel ----
 const detailPanel = document.getElementById("detailPanel");
 const detailPhoto = document.getElementById("detailPhoto");
 const detailCategory = document.getElementById("detailCategory");
 const detailName = document.getElementById("detailName");
 const detailDescription = document.getElementById("detailDescription");
-
+const nearbySection = document.getElementById("nearbySection");
+const nearbyList = document.getElementById("nearbyList");
+ 
+const NEARBY_RADIUS_KM = 2;
+ 
 function showDetailPanel(props) {
   detailPhoto.src = props.photo_url || "";
   detailPhoto.alt = props.name;
@@ -60,13 +64,97 @@ function showDetailPanel(props) {
   detailName.textContent = props.name;
   detailDescription.textContent = props.description || "No description available.";
   detailPanel.classList.remove("hidden");
+ 
+  // scroll panel back to top so the newly selected attraction is visible
+  detailPanel.scrollTop = 0;
+ 
+  loadNearbyAttractions(props);
 }
-
+ 
+async function loadNearbyAttractions(props) {
+  nearbySection.classList.add("hidden");
+  nearbyList.innerHTML = "";
+ 
+  if (props.lat == null || props.lng == null) return;
+ 
+  const params = new URLSearchParams({
+    lat: props.lat,
+    lng: props.lng,
+    radius_km: NEARBY_RADIUS_KM,
+  });
+  if (props.id != null) params.set("exclude_id", props.id);
+ 
+  try {
+    const res = await fetch(`${API_BASE}/attractions/nearby?${params.toString()}`);
+    if (!res.ok) throw new Error(`API error: ${res.status}`);
+    const data = await res.json();
+    renderNearbyList(data.features);
+  } catch (err) {
+    console.error("Failed to fetch nearby attractions:", err);
+  }
+}
+ 
+function renderNearbyList(features) {
+  nearbySection.classList.remove("hidden");
+  nearbyList.innerHTML = "";
+ 
+  if (features.length === 0) {
+    const empty = document.createElement("li");
+    empty.className = "nearby-empty";
+    empty.textContent = "No other attractions within 2km.";
+    nearbyList.appendChild(empty);
+    return;
+  }
+ 
+  features.forEach((feature) => {
+    const [lng, lat] = feature.geometry.coordinates;
+    const nearbyProps = { ...feature.properties, lat, lng };
+ 
+    const li = document.createElement("li");
+    li.className = "nearby-item";
+ 
+    const info = document.createElement("div");
+    info.className = "nearby-item-info";
+ 
+    const dot = document.createElement("span");
+    dot.className = "nearby-dot";
+    dot.style.background = categoryColor(nearbyProps.category);
+ 
+    const name = document.createElement("span");
+    name.className = "nearby-name";
+    name.textContent = nearbyProps.name;
+ 
+    const distance = document.createElement("span");
+    distance.className = "nearby-distance";
+    if (typeof nearbyProps.distance_m === "number") {
+      distance.textContent = nearbyProps.distance_m >= 1000
+        ? `${(nearbyProps.distance_m / 1000).toFixed(1)}km`
+        : `${nearbyProps.distance_m}m`;
+    }
+ 
+    info.appendChild(dot);
+    info.appendChild(name);
+ 
+    const viewLink = document.createElement("button");
+    viewLink.type = "button";
+    viewLink.className = "nearby-view-link";
+    viewLink.textContent = "view info";
+    viewLink.addEventListener("click", () => {
+      showDetailPanel(nearbyProps);
+      map.panTo([lat, lng]);
+    });
+ 
+    li.appendChild(info);
+    li.appendChild(distance);
+    li.appendChild(viewLink);
+    nearbyList.appendChild(li);
+  });
+}
+ 
 document.getElementById("closePanel").addEventListener("click", () => {
   detailPanel.classList.add("hidden");
 });
-
-
+ 
 // ---- Loading overlay ----
 const loadingOverlay = document.getElementById("loadingOverlay");
 function showLoading() { loadingOverlay.classList.remove("hidden"); }
